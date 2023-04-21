@@ -7,22 +7,22 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-[67px] shadow-md fixed bg-white z-[9999]">
+    <div className="w-full h-[60px] shadow-md fixed bg-white z-[9999]">
       <div className="container h-full mx-auto px-4 flex items-center justify-between">
         <div className="w-full flex items-center">
-          <img src="/icons/klassin.png" alt="" />
+          <img className="w-[100px]" src="/icons/klassin.png" alt="" />
           <ul className="lg:flex hidden">
-            <li className="p-4 mt-2 cursor-pointer text-[17px]">About</li>
-            <li className="p-4 mt-2 cursor-pointer text-[17px]">Services</li>
-            <li className="p-4 mt-2 cursor-pointer text-[17px]">School list</li>
-            <li className="p-4 mt-2 cursor-pointer text-[17px]">Contact</li>
+            <li className="p-4 mt-2 cursor-pointer text-[15px]">About</li>
+            <li className="p-4 mt-2 cursor-pointer text-[15px]">Services</li>
+            <li className="p-4 mt-2 cursor-pointer text-[15px]">School list</li>
+            <li className="p-4 mt-2 cursor-pointer text-[15px]">Contact</li>
           </ul>
         </div>
         <div className="lg:flex gap-3 hidden">
-          <div className="font-medium p-2 px-5 cursor-pointer rounded border-2 border-purple-600">
+          <div className="font-medium p-1.5 px-5 text-base cursor-pointer rounded border-2 border-purple-600">
             Login
           </div>
-          <div className="font-medium p-2 px-5 cursor-pointer rounded text-white bg-purple-600">
+          <div className="font-medium p-1.5 px-5 text-base cursor-pointer rounded text-white bg-purple-600">
             Signin
           </div>
         </div>
