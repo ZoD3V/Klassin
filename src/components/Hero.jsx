@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="w-full pt-[110px]">
+    <div className="w-full pt-[110px]" id="hero">
       <div className="flex flex-col h-full items-center container mx-auto px-4">
         <div className="flex md:gap-10 flex-wrap items-center justify-center w-full">
           <h2 className="font-bold text-purple-500 md:text-3xl lg:max-w-[250px] text-2xl text-center">

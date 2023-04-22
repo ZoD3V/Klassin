@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
@@ -10,19 +12,42 @@ const Navbar = () => {
     <div className="w-full h-[60px] shadow-md fixed bg-white z-[9999]">
       <div className="container h-full mx-auto px-4 flex items-center justify-between">
         <div className="w-full flex items-center">
-          <img className="w-[100px]" src="/icons/klassin.png" alt="" />
+          <Link to="hero" smooth={true} duration={500}>
+            <img
+              className="w-[100px] cursor-pointer"
+              src="/icons/klassin.png"
+              alt=""
+            />
+          </Link>
+
           <ul className="lg:flex hidden">
-            <li className="p-4 mt-2 cursor-pointer text-[15px]">About</li>
-            <li className="p-4 mt-2 cursor-pointer text-[15px]">Services</li>
-            <li className="p-4 mt-2 cursor-pointer text-[15px]">School list</li>
-            <li className="p-4 mt-2 cursor-pointer text-[15px]">Contact</li>
+            <li className="p-4 mt-2 cursor-pointer text-[15px] font-medium">
+              <Link to="about" smooth={true} duration={500}>
+                About
+              </Link>
+            </li>
+            <li className="p-4 mt-2 cursor-pointer text-[15px] font-medium">
+              <Link to="services" smooth={true} duration={500}>
+                Services
+              </Link>
+            </li>
+            <li className="p-4 mt-2 cursor-pointer text-[15px] font-medium">
+              <Link to="school-list" smooth={true} duration={500}>
+                School List
+              </Link>
+            </li>
+            <li className="p-4 mt-2 cursor-pointer text-[15px] font-medium">
+              <Link to="contact" smooth={true} duration={500}>
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="lg:flex gap-3 hidden">
-          <div className="font-medium p-1.5 px-5 text-base cursor-pointer rounded border-2 border-purple-600">
+          <div className="font-medium p-1.5 px-5 text-[15px] cursor-pointer rounded border-2 border-purple-600">
             Login
           </div>
-          <div className="font-medium p-1.5 px-5 text-base cursor-pointer rounded text-white bg-purple-600">
+          <div className="font-medium p-1.5 px-5 text-[15px] cursor-pointer rounded text-white bg-purple-600">
             Signin
           </div>
         </div>
@@ -63,14 +88,16 @@ const Navbar = () => {
           <ul className={nav ? "block lg:hidden" : "lg:hidden"}>
             <li className="group">
               <a
-                href="#home"
+                href="/"
                 className={
                   nav
                     ? "text-lg font-medium text-dark py-2 mx-8 flex group-hover:text-primary"
                     : "hidden"
                 }
               >
-                About
+                <Link to="about" smooth={true} duration={500}>
+                  About
+                </Link>
               </a>
             </li>
             <li className="group">
@@ -82,31 +109,37 @@ const Navbar = () => {
                     : "hidden"
                 }
               >
-                Services
+                <Link to="services" smooth={true} duration={500}>
+                  Services
+                </Link>
               </a>
             </li>
             <li className="group">
               <a
-                href="#certificate"
+                href="/"
                 className={
                   nav
                     ? "text-lg font-medium text-dark py-2 mx-8 flex group-hover:text-primary"
                     : "hidden"
                 }
               >
-                School list
+                <Link to="school-list" smooth={true} duration={500}>
+                  School List
+                </Link>
               </a>
             </li>
             <li className="group">
               <a
-                href="#portfolio"
+                href="/"
                 className={
                   nav
                     ? "text-lg font-medium text-dark py-2 mx-8 flex group-hover:text-primary"
                     : "hidden"
                 }
               >
-                Contact
+                <Link to="contact" smooth={true} duration={500}>
+                  Contact
+                </Link>
               </a>
             </li>
           </ul>
